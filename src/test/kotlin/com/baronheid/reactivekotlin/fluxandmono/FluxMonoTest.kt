@@ -3,9 +3,9 @@ package com.baronheid.reactivekotlin.fluxandmono
 import org.junit.jupiter.api.Test
 import reactor.core.publisher.Flux
 import reactor.kotlin.core.publisher.toFlux
+import reactor.kotlin.core.publisher.toMono
 import reactor.kotlin.core.publisher.whenComplete
 import reactor.kotlin.test.test
-import java.lang.IllegalArgumentException
 import java.util.function.Consumer
 
 class FluxMonoTest {
@@ -71,5 +71,27 @@ class FluxMonoTest {
                 .expectNext("Spring", "Spring Boot", "Reactive Spring")
                 .expectErrorMessage("This is an error")
                 .verify()
+    }
+
+    @Test
+    fun `Mono test`(){
+
+        val stringMono = "Spring Mono".toMono().log()
+
+        stringMono.test()
+                .expectNext("Spring Mono")
+                .verifyComplete()
+
+    }
+
+    @Test
+    fun `Mono error test`(){
+
+
+        IllegalArgumentException("arroz").toMono<Exception>().log()
+                .test()
+                .expectError(IllegalArgumentException::class.java)
+                .verify()
+
     }
 }
