@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.baronheid.reactivekotlin.fluxandmono.FluxMonoCombineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-12-13T23:29:19" hostname="baronheid-Latitude-3400" time="0.203">
+  <properties/>
+  <testcase name="Combine using concat with delay()" classname="com.baronheid.reactivekotlin.fluxandmono.FluxMonoCombineTest" time="0.203"/>
+  <system-out><![CDATA[20:29:19.991 [Test worker] DEBUG reactor.util.Loggers$LoggerFactory - Using Slf4j logging framework
+20:29:20.094 [Test worker] INFO reactor.Flux.ConcatArray.1 - onSubscribe(FluxConcatArray.ConcatArraySubscriber)
+20:29:20.096 [Test worker] INFO reactor.Flux.Log.2 - onSubscribe(FluxPeek.PeekSubscriber)
+20:29:20.098 [Test worker] INFO reactor.Flux.Log.2 - request(unbounded)
+20:29:20.099 [Test worker] INFO reactor.Flux.ConcatArray.1 - request(unbounded)
+20:29:20.129 [Test worker] INFO reactor.Flux.ConcatArray.1 - onNext(A)
+20:29:20.129 [Test worker] INFO reactor.Flux.Log.2 - onNext(A)
+20:29:20.130 [Test worker] INFO reactor.Flux.ConcatArray.1 - onNext(B)
+20:29:20.130 [Test worker] INFO reactor.Flux.Log.2 - onNext(B)
+20:29:20.130 [Test worker] INFO reactor.Flux.ConcatArray.1 - onNext(C)
+20:29:20.130 [Test worker] INFO reactor.Flux.Log.2 - onNext(C)
+20:29:20.131 [Test worker] INFO reactor.Flux.ConcatArray.1 - onNext(D)
+20:29:20.131 [Test worker] INFO reactor.Flux.Log.2 - onNext(D)
+20:29:20.131 [Test worker] INFO reactor.Flux.ConcatArray.1 - onNext(E)
+20:29:20.131 [Test worker] INFO reactor.Flux.Log.2 - onNext(E)
+20:29:20.131 [Test worker] INFO reactor.Flux.ConcatArray.1 - onNext(F)
+20:29:20.131 [Test worker] INFO reactor.Flux.Log.2 - onNext(F)
+20:29:20.132 [Test worker] INFO reactor.Flux.ConcatArray.1 - onComplete()
+20:29:20.132 [Test worker] INFO reactor.Flux.Log.2 - onComplete()
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

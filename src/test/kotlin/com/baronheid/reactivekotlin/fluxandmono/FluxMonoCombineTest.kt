@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test
 import reactor.core.publisher.Flux
 import reactor.kotlin.core.publisher.toFlux
 import reactor.kotlin.test.test
+import reactor.test.StepVerifier
+import reactor.test.scheduler.VirtualTimeScheduler
 import java.time.Duration
 
 
@@ -50,15 +52,24 @@ class FluxMonoCombineTest {
 
     @Test
     fun `Combine using concat with delay`(){
+
+        VirtualTimeScheduler.getOrSet()
+
         val fluxStringOne = listOf("A","B","C").toFlux().delayElements(Duration.ofSeconds(1))
         val fluxStringTwo = listOf("D","E","F").toFlux().delayElements(Duration.ofSeconds(1))
 
         val mergedFlux = Flux.concat(fluxStringOne, fluxStringTwo).log()
 
-        mergedFlux.test()
+        StepVerifier.withVirtualTime { mergedFlux.log() }
                 .expectSubscription()
+                .thenAwait(Duration.ofSeconds(6))
                 .expectNextCount(6)
                 .verifyComplete()
+
+//        mergedFlux.test()
+//                .expectSubscription()
+//                .expectNextCount(6)
+//                .verifyComplete()
     }
 
     @Test
