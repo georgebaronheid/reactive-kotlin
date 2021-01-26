@@ -29,7 +29,7 @@
 </td>
 <td>
 <div class="infoBox" id="failures">
-<div class="counter">1</div>
+<div class="counter">0</div>
 <p>failures</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.382s</div>
+<div class="counter">0.898s</div>
 <p>duration</p>
 </div>
 </td>
@@ -50,8 +50,8 @@
 </div>
 </td>
 <td>
-<div class="infoBox failures" id="successRate">
-<div class="percent">0%</div>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
 <p>successful</p>
 </div>
 </td>
@@ -61,138 +61,13 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Failed tests</a>
+<a href="#tab0">Tests</a>
 </li>
 <li>
-<a href="#tab1">Tests</a>
-</li>
-<li>
-<a href="#tab2">Standard output</a>
+<a href="#tab1">Standard output</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
-<h2>Failed tests</h2>
-<div class="test">
-<a name="Flux approach test()"></a>
-<h3 class="failures">Flux approach test()</h3>
-<span class="code">
-<pre>java.lang.AssertionError: Status expected:&lt;200 OK&gt; but was:&lt;404 NOT_FOUND&gt;
-
-&gt; GET functional/mono
-&gt; WebTestClient-Request-Id: [1]
-&gt; Accept: [application/x-ndjson]
-
-No content
-
-&lt; 404 NOT_FOUND Not Found
-&lt; Content-Type: [application/json]
-&lt; Content-Length: [139]
-
-{&quot;timestamp&quot;:&quot;2020-12-15T01:19:32.193+00:00&quot;,&quot;path&quot;:&quot;functional/mono&quot;,&quot;status&quot;:404,&quot;error&quot;:&quot;Not Found&quot;,&quot;message&quot;:&quot;&quot;,&quot;requestId&quot;:&quot;5b11e2d0&quot;}
-
-	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:226)
-	at org.springframework.test.web.reactive.server.StatusAssertions.assertStatusAndReturn(StatusAssertions.java:227)
-	at org.springframework.test.web.reactive.server.StatusAssertions.isOk(StatusAssertions.java:67)
-	at com.baronheid.reactivekotlin.handler.SampleHandlerTest.Flux approach test(SampleHandlerTest.kt:29)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
-	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140)
-	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45)
-	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104)
-	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$6(TestMethodTestDescriptor.java:210)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:206)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:131)
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:65)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:139)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129)
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127)
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126)
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84)
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57)
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:248)
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$5(DefaultLauncher.java:211)
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:226)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:199)
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:132)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:99)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:79)
-	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:75)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:61)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.stop(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.stop(TestWorker.java:133)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-Caused by: java.lang.AssertionError: Status expected:&lt;200 OK&gt; but was:&lt;404 NOT_FOUND&gt;
-	at org.springframework.test.util.AssertionErrors.fail(AssertionErrors.java:59)
-	at org.springframework.test.util.AssertionErrors.assertEquals(AssertionErrors.java:122)
-	at org.springframework.test.web.reactive.server.StatusAssertions.lambda$assertStatusAndReturn$4(StatusAssertions.java:227)
-	at org.springframework.test.web.reactive.server.ExchangeResult.assertWithDiagnostics(ExchangeResult.java:223)
-	... 91 more
-</pre>
-</span>
-</div>
-</div>
-<div id="tab1" class="tab">
 <h2>Tests</h2>
 <table>
 <thead>
@@ -203,33 +78,33 @@ Caused by: java.lang.AssertionError: Status expected:&lt;200 OK&gt; but was:&lt;
 </tr>
 </thead>
 <tr>
-<td class="failures">Flux approach test()</td>
-<td class="failures">0.382s</td>
-<td class="failures">failed</td>
+<td class="success">Flux approach test()</td>
+<td class="success">0.898s</td>
+<td class="success">passed</td>
 </tr>
 </table>
 </div>
-<div id="tab2" class="tab">
+<div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>22:19:29.402 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-22:19:29.413 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-22:19:29.448 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-22:19:29.460 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest], using SpringBootContextLoader
-22:19:29.463 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: class path resource [com/baronheid/reactivekotlin/handler/SampleHandlerTest-context.xml] does not exist
-22:19:29.464 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: class path resource [com/baronheid/reactivekotlin/handler/SampleHandlerTestContext.groovy] does not exist
-22:19:29.464 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-22:19:29.465 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: SampleHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-22:19:29.509 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]
-22:19:29.554 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/baronheid/IdeaProjects/reactive-kotlin/build/classes/kotlin/main/com/baronheid/reactivekotlin/ReactiveKotlinApplication.class]
-22:19:29.556 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.baronheid.reactivekotlin.ReactiveKotlinApplication for test class com.baronheid.reactivekotlin.handler.SampleHandlerTest
-22:19:29.626 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: using defaults.
-22:19:29.626 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-22:19:29.632 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
-22:19:29.637 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6290d2a9, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@f821a67, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2346af04, org.springframework.test.context.support.DirtiesContextTestExecutionListener@66eac44f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@28b57a1, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1d4524b5, org.springframework.test.context.event.EventPublishingTestExecutionListener@b6d8696, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3b95e308, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@63fb9d84, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@572f6dc2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@30910887, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@2408303e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1b208e86]
-22:19:29.640 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@75917cfe testClass = SampleHandlerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@630dca1d testClass = SampleHandlerTest, locations = '{}', classes = '{class com.baronheid.reactivekotlin.ReactiveKotlinApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@74104827, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ec54a5c9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3ed5ae78, [ImportsContextCustomizer@3d09380 key = [org.springframework.boot.autoconfigure.security.oauth2.client.reactive.ReactiveOAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.reactive.ReactiveOAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4890ba10, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47374a15, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3e0ab53c, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@1af4eaa7, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@15cb97], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
-22:19:29.650 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@75917cfe testClass = SampleHandlerTest, testInstance = com.baronheid.reactivekotlin.handler.SampleHandlerTest@6452602, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@630dca1d testClass = SampleHandlerTest, locations = '{}', classes = '{class com.baronheid.reactivekotlin.ReactiveKotlinApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@74104827, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ec54a5c9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@3ed5ae78, [ImportsContextCustomizer@3d09380 key = [org.springframework.boot.autoconfigure.security.oauth2.client.reactive.ReactiveOAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.reactive.ReactiveOAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@4890ba10, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@47374a15, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@3e0ab53c, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@1af4eaa7, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@15cb97], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
-22:19:29.666 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+<pre>08:17:19.700 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+08:17:19.723 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+08:17:19.801 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+08:17:19.819 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest], using SpringBootContextLoader
+08:17:19.824 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: class path resource [com/baronheid/reactivekotlin/handler/SampleHandlerTest-context.xml] does not exist
+08:17:19.825 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: class path resource [com/baronheid/reactivekotlin/handler/SampleHandlerTestContext.groovy] does not exist
+08:17:19.826 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+08:17:19.828 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: SampleHandlerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+08:17:19.910 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]
+08:17:19.987 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/home/baronheid/IdeaProjects/reactive-kotlin/build/classes/kotlin/main/com/baronheid/reactivekotlin/ReactiveKotlinApplication.class]
+08:17:19.989 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.baronheid.reactivekotlin.ReactiveKotlinApplication for test class com.baronheid.reactivekotlin.handler.SampleHandlerTest
+08:17:20.112 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.baronheid.reactivekotlin.handler.SampleHandlerTest]: using defaults.
+08:17:20.113 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+08:17:20.127 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Skipping candidate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener] due to a missing dependency. Specify custom listener classes or make the default listener classes and their required dependencies available. Offending class: [javax/servlet/ServletContext]
+08:17:20.137 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5c410978, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@161c3b08, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2695133e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@38e565fe, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6c3ba153, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1b0803a7, org.springframework.test.context.event.EventPublishingTestExecutionListener@150aef1b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@6d3b2d1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@37d3ba61, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@6c9d9207, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2eaddab8, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3573a086, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1fd904fb]
+08:17:20.141 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@50d3cad6 testClass = SampleHandlerTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@11436dbd testClass = SampleHandlerTest, locations = '{}', classes = '{class com.baronheid.reactivekotlin.ReactiveKotlinApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@2add126, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ec54a5c9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@11cef2c2, [ImportsContextCustomizer@fbee2c5 key = [org.springframework.boot.autoconfigure.security.oauth2.client.reactive.ReactiveOAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.reactive.ReactiveOAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@66ace269, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@67a6cf20, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@595efe62, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@3d9a6361, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@39252434], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]], class annotated with @DirtiesContext [false] with mode [null].
+08:17:20.157 [Test worker] DEBUG org.springframework.test.context.support.DependencyInjectionTestExecutionListener - Performing dependency injection for test context [[DefaultTestContext@50d3cad6 testClass = SampleHandlerTest, testInstance = com.baronheid.reactivekotlin.handler.SampleHandlerTest@2be2c1be, testMethod = [null], testException = [null], mergedContextConfiguration = [ReactiveWebMergedContextConfiguration@11436dbd testClass = SampleHandlerTest, locations = '{}', classes = '{class com.baronheid.reactivekotlin.ReactiveKotlinApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@2add126, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@ec54a5c9, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@11cef2c2, [ImportsContextCustomizer@fbee2c5 key = [org.springframework.boot.autoconfigure.security.oauth2.client.reactive.ReactiveOAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.reactive.ReactiveOAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveSecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.reactive.ReactiveUserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.reactive.WebTestClientAutoConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@66ace269, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@67a6cf20, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@595efe62, org.springframework.boot.test.web.reactive.server.WebTestClientContextCustomizer@3d9a6361, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@39252434], contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map[[empty]]]].
+08:17:20.192 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -239,47 +114,55 @@ Caused by: java.lang.AssertionError: Status expected:&lt;200 OK&gt; but was:&lt;
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.4.0)
 
-2020-12-14 22:19:29.890  INFO 13075 --- [    Test worker] c.b.r.handler.SampleHandlerTest          : Starting SampleHandlerTest using Java 14.0.2 on baronheid-Latitude-3400 with PID 13075 (started by baronheid in /home/baronheid/IdeaProjects/reactive-kotlin)
-2020-12-14 22:19:29.893  INFO 13075 --- [    Test worker] c.b.r.handler.SampleHandlerTest          : No active profile set, falling back to default profiles: default
-2020-12-14 22:19:30.440  INFO 13075 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
-2020-12-14 22:19:30.456  INFO 13075 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 Reactive MongoDB repository interfaces.
-2020-12-14 22:19:31.341  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
-2020-12-14 22:19:31.343  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten] MongoDB starting : pid=13125 port=36387 dbpath=/tmp/embedmongo-db-52e7e4b0-b5a7-4704-823a-8ee34675ea93 64-bit host=baronheid-Latitude-3400
-2020-12-14 22:19:31.343  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten] db version v3.5.5
-2020-12-14 22:19:31.343  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
-2020-12-14 22:19:31.343  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten] allocator: tcmalloc
-2020-12-14 22:19:31.344  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten] modules: none
-2020-12-14 22:19:31.344  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten] build environment:
-2020-12-14 22:19:31.344  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten]     distarch: x86_64
-2020-12-14 22:19:31.344  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten]     target_arch: x86_64
-2020-12-14 22:19:31.344  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.343-0300 I CONTROL  [initandlisten] options: { net: { bindIp: &quot;127.0.0.1&quot;, http: { enabled: false }, port: 36387 }, security: { authorization: &quot;disabled&quot; }, storage: { dbPath: &quot;/tmp/embedmongo-db-52e7e4b0-b5a7-4704-823a-8ee34675ea93&quot;, journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true }, syncPeriodSecs: 0.0 } }
-2020-12-14 22:19:31.346  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.345-0300 I STORAGE  [initandlisten] 
-2020-12-14 22:19:31.346  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.345-0300 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
-2020-12-14 22:19:31.346  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.345-0300 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
-2020-12-14 22:19:31.346  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.346-0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7429M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=0,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
-2020-12-14 22:19:31.394  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.393-0300 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
-2020-12-14 22:19:31.395  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.393-0300 I CONTROL  [initandlisten] 
-2020-12-14 22:19:31.395  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.393-0300 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
-2020-12-14 22:19:31.396  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.393-0300 I CONTROL  [initandlisten] **       Not recommended for production.
-2020-12-14 22:19:31.397  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.393-0300 I CONTROL  [initandlisten] 
-2020-12-14 22:19:31.398  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.394-0300 I CONTROL  [initandlisten] 
-2020-12-14 22:19:31.398  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.394-0300 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 63240 processes, 1048576 files. Number of processes should be at least 524288 : 0.5 times number of files.
-2020-12-14 22:19:31.409  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.409-0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/tmp/embedmongo-db-52e7e4b0-b5a7-4704-823a-8ee34675ea93/diagnostic.data'
-2020-12-14 22:19:31.434  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.434-0300 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: &quot;incompatible_with_version_32&quot;, ns: &quot;admin.system.version&quot; }
-2020-12-14 22:19:31.435  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.434-0300 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
-2020-12-14 22:19:31.436  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.435-0300 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
-2020-12-14 22:19:31.437  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.436-0300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
-2020-12-14 22:19:31.437  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.437-0300 I NETWORK  [thread1] waiting for connections on port 36387
-2020-12-14 22:19:31.438  INFO 13075 --- [    Test worker] d.f.embed.mongo.MongodExecutable         : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@1a787579
-2020-12-14 22:19:31.556  INFO 13075 --- [    Test worker] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:36387], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
-2020-12-14 22:19:31.626  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.625-0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:39940 #1 (1 connection now open)
-2020-12-14 22:19:31.626  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.626-0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:39942 #2 (2 connections now open)
-2020-12-14 22:19:31.669  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.669-0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:39940 conn1: { driver: { name: &quot;mongo-java-driver|reactive-streams|spring-boot&quot;, version: &quot;4.1.1&quot; }, os: { type: &quot;Linux&quot;, name: &quot;Linux&quot;, architecture: &quot;amd64&quot;, version: &quot;5.4.0-56-generic&quot; }, platform: &quot;Java/Oracle Corporation/14.0.2+12-46&quot; }
-2020-12-14 22:19:31.669  INFO 13075 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2020-12-14T22:19:31.669-0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:39942 conn2: { driver: { name: &quot;mongo-java-driver|reactive-streams|spring-boot&quot;, version: &quot;4.1.1&quot; }, os: { type: &quot;Linux&quot;, name: &quot;Linux&quot;, architecture: &quot;amd64&quot;, version: &quot;5.4.0-56-generic&quot; }, platform: &quot;Java/Oracle Corporation/14.0.2+12-46&quot; }
-2020-12-14 22:19:31.694  INFO 13075 --- [localhost:36387] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:36387
-2020-12-14 22:19:31.694  INFO 13075 --- [localhost:36387] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:36387
-2020-12-14 22:19:31.695  INFO 13075 --- [localhost:36387] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:36387, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=62112694}
-2020-12-14 22:19:31.861  INFO 13075 --- [    Test worker] c.b.r.handler.SampleHandlerTest          : Started SampleHandlerTest in 2.188 seconds (JVM running for 2.983)
+2021-01-26 08:17:20.649  INFO 18714 --- [    Test worker] c.b.r.handler.SampleHandlerTest          : Starting SampleHandlerTest using Java 14.0.2 on baronheid-Latitude-3400 with PID 18714 (started by baronheid in /home/baronheid/IdeaProjects/reactive-kotlin)
+2021-01-26 08:17:20.656  INFO 18714 --- [    Test worker] c.b.r.handler.SampleHandlerTest          : No active profile set, falling back to default profiles: default
+2021-01-26 08:17:21.730  INFO 18714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Reactive MongoDB repositories in DEFAULT mode.
+2021-01-26 08:17:21.757  INFO 18714 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 21 ms. Found 0 Reactive MongoDB repository interfaces.
+2021-01-26 08:17:23.301  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : note: noprealloc may hurt performance in many applications
+2021-01-26 08:17:23.305  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.304-0300 I CONTROL  [initandlisten] MongoDB starting : pid=18765 port=45347 dbpath=/tmp/embedmongo-db-28c41c6b-7828-42fc-92ea-3c429cacc3b0 64-bit host=baronheid-Latitude-3400
+2021-01-26 08:17:23.305  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten] db version v3.5.5
+2021-01-26 08:17:23.305  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten] git version: 98515c812b6fa893613f063dae568ff8319cbfbd
+2021-01-26 08:17:23.306  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten] allocator: tcmalloc
+2021-01-26 08:17:23.306  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten] modules: none
+2021-01-26 08:17:23.306  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten] build environment:
+2021-01-26 08:17:23.306  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten]     distarch: x86_64
+2021-01-26 08:17:23.307  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten]     target_arch: x86_64
+2021-01-26 08:17:23.307  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.305-0300 I CONTROL  [initandlisten] options: { net: { bindIp: &quot;127.0.0.1&quot;, http: { enabled: false }, port: 45347 }, security: { authorization: &quot;disabled&quot; }, storage: { dbPath: &quot;/tmp/embedmongo-db-28c41c6b-7828-42fc-92ea-3c429cacc3b0&quot;, journal: { enabled: false }, mmapv1: { preallocDataFiles: false, smallFiles: true }, syncPeriodSecs: 0.0 } }
+2021-01-26 08:17:23.312  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.312-0300 I STORAGE  [initandlisten] 
+2021-01-26 08:17:23.312  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.312-0300 I STORAGE  [initandlisten] ** WARNING: Using the XFS filesystem is strongly recommended with the WiredTiger storage engine
+2021-01-26 08:17:23.313  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.312-0300 I STORAGE  [initandlisten] **          See http://dochub.mongodb.org/core/prodnotes-filesystem
+2021-01-26 08:17:23.313  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.312-0300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=7429M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),checkpoint=(wait=0,log_size=2GB),statistics_log=(wait=0),verbose=(recovery_progress),,log=(enabled=false),
+2021-01-26 08:17:23.363  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.362-0300 W STORAGE  [initandlisten] Detected configuration for non-active storage engine mmapv1 when current storage engine is wiredTiger
+2021-01-26 08:17:23.363  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.362-0300 I CONTROL  [initandlisten] 
+2021-01-26 08:17:23.364  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.362-0300 I CONTROL  [initandlisten] ** NOTE: This is a development version (3.5.5) of MongoDB.
+2021-01-26 08:17:23.364  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.362-0300 I CONTROL  [initandlisten] **       Not recommended for production.
+2021-01-26 08:17:23.365  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.362-0300 I CONTROL  [initandlisten] 
+2021-01-26 08:17:23.365  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.363-0300 I CONTROL  [initandlisten] 
+2021-01-26 08:17:23.366  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.363-0300 I CONTROL  [initandlisten] ** WARNING: soft rlimits too low. rlimits set to 63240 processes, 1048576 files. Number of processes should be at least 524288 : 0.5 times number of files.
+2021-01-26 08:17:23.375  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.375-0300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/tmp/embedmongo-db-28c41c6b-7828-42fc-92ea-3c429cacc3b0/diagnostic.data'
+2021-01-26 08:17:23.393  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.393-0300 I INDEX    [initandlisten] build index on: admin.system.version properties: { v: 2, key: { version: 1 }, name: &quot;incompatible_with_version_32&quot;, ns: &quot;admin.system.version&quot; }
+2021-01-26 08:17:23.394  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.393-0300 I INDEX    [initandlisten] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2021-01-26 08:17:23.395  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.394-0300 I INDEX    [initandlisten] build index done.  scanned 0 total records. 0 secs
+2021-01-26 08:17:23.396  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.395-0300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 3.4
+2021-01-26 08:17:23.396  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.396-0300 I NETWORK  [thread1] waiting for connections on port 45347
+2021-01-26 08:17:23.397  INFO 18714 --- [    Test worker] d.f.embed.mongo.MongodExecutable         : start de.flapdoodle.embed.mongo.config.MongodConfigBuilder$ImmutableMongodConfig@14d6c6ac
+2021-01-26 08:17:23.528  INFO 18714 --- [    Test worker] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:45347], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-01-26 08:17:23.681  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.681-0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:53766 #1 (1 connection now open)
+2021-01-26 08:17:23.682  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.681-0300 I NETWORK  [thread1] connection accepted from 127.0.0.1:53768 #2 (2 connections now open)
+2021-01-26 08:17:23.766  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.766-0300 I NETWORK  [conn1] received client metadata from 127.0.0.1:53766 conn1: { driver: { name: &quot;mongo-java-driver|reactive-streams|spring-boot&quot;, version: &quot;4.1.1&quot; }, os: { type: &quot;Linux&quot;, name: &quot;Linux&quot;, architecture: &quot;amd64&quot;, version: &quot;5.4.0-56-generic&quot; }, platform: &quot;Java/Oracle Corporation/14.0.2+12-46&quot; }
+2021-01-26 08:17:23.767  INFO 18714 --- [       Thread-6] o.s.b.a.mongo.embedded.EmbeddedMongo     : 2021-01-26T08:17:23.766-0300 I NETWORK  [conn2] received client metadata from 127.0.0.1:53768 conn2: { driver: { name: &quot;mongo-java-driver|reactive-streams|spring-boot&quot;, version: &quot;4.1.1&quot; }, os: { type: &quot;Linux&quot;, name: &quot;Linux&quot;, architecture: &quot;amd64&quot;, version: &quot;5.4.0-56-generic&quot; }, platform: &quot;Java/Oracle Corporation/14.0.2+12-46&quot; }
+2021-01-26 08:17:23.825  INFO 18714 --- [localhost:45347] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:2}] to localhost:45347
+2021-01-26 08:17:23.825  INFO 18714 --- [localhost:45347] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:1}] to localhost:45347
+2021-01-26 08:17:23.829  INFO 18714 --- [localhost:45347] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:45347, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=null, roundTripTimeNanos=132601488}
+2021-01-26 08:17:24.122  INFO 18714 --- [    Test worker] c.b.r.handler.SampleHandlerTest          : Started SampleHandlerTest in 3.909 seconds (JVM running for 6.051)
+2021-01-26 08:17:24.923  INFO 18714 --- [     parallel-1] reactor.Flux.Iterable.1                  : | onSubscribe([Synchronous Fuseable] FluxIterable.IterableSubscription)
+2021-01-26 08:17:24.924  INFO 18714 --- [     parallel-1] reactor.Flux.Iterable.1                  : | request(1)
+2021-01-26 08:17:24.925  INFO 18714 --- [     parallel-1] reactor.Flux.Iterable.1                  : | onNext(1)
+2021-01-26 08:17:25.023  INFO 18714 --- [    Test worker] reactor.Flux.Iterable.1                  : | request(31)
+2021-01-26 08:17:25.024  INFO 18714 --- [    Test worker] reactor.Flux.Iterable.1                  : | onNext(2)
+2021-01-26 08:17:25.025  INFO 18714 --- [    Test worker] reactor.Flux.Iterable.1                  : | onNext(3)
+2021-01-26 08:17:25.025  INFO 18714 --- [    Test worker] reactor.Flux.Iterable.1                  : | onNext(4)
+2021-01-26 08:17:25.027  INFO 18714 --- [    Test worker] reactor.Flux.Iterable.1                  : | onComplete()
 </pre>
 </span>
 </div>
@@ -291,7 +174,7 @@ Caused by: java.lang.AssertionError: Status expected:&lt;200 OK&gt; but was:&lt;
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 6.6.1</a> at 14 de dez. de 2020 22:19:34</p>
+<a href="http://www.gradle.org">Gradle 6.6.1</a> at Jan 26, 2021, 8:17:27 AM</p>
 </div>
 </div>
 </body>
